@@ -4,7 +4,7 @@ import About from "./About";
 
 export default function Index() {
   useEffect(() => {
-    document.title = "Alexander Svensson | Civilingenjörsstudent inom AI och maskininlärning";
+    document.title = "Oscar Enghag | Civilingenjörsstudent inom AI och maskininlärning";
   }, []);
 
   return <About />;

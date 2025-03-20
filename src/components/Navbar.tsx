@@ -51,7 +51,7 @@ export default function Navbar() {
     )}>
       <div className="wrapper py-4 flex items-center justify-between">
         <Link to="/" className="text-xl font-mono font-semibold opacity-90 hover:opacity-100 transition-opacity">
-          <span className="px-3 py-1 bg-secondary rounded">alex</span>
+          <span className="px-3 py-1 bg-secondary rounded">oscar</span>
         </Link>
         
         <nav className="flex items-center space-x-6">

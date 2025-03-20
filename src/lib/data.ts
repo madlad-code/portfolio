@@ -1,10 +1,10 @@
 
 export const personalInfo = {
-  name: "Alexander Svensson",
+  name: "Oscar Enghag",
   title: "Civilingenjörsstudent inom AI och maskininlärning, tidigare elektricitetsmekaniker",
-  bio: "Jag är en elektriskt intresserad ingenjörsstudent med bakgrund från försvarsmakten som elektricitetsmekaniker. Nu studerar jag AI och maskininlärning på Blekinge Tekniska Högskola med målet att arbeta inom försvarsindustrin med avancerad teknik och cybersäkerhet.",
+  bio: "Jag är en elektriskt intresserad ingenjörsstudent med bakgrund från försvarsmakten som elektricitetsmekaniker. Nu studerar jag AI och maskininlärning på Blekinge Tekniska Högskola med målet att arbeta inom försvarsindustrin med avancerad teknik och cybersäkerhet. Jag har även stor passion för algoritmisk trading och tidigare erfarenhet som VD för ett framgångsrikt UF-företag.",
   location: "Karlskrona",
-  email: "alex.svensson@example.com",
+  email: "oscar.enghag@example.com",
 };
 
 export const socialLinks = [
@@ -28,6 +28,15 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    company: "UF-företag - RemoteLink",
+    companyUrl: "#",
+    logo: "/lovable-uploads/aab37b0d-b667-40c0-88ec-aacd2f45c642.png",
+    position: "VD",
+    duration: "AUG 2022 - JUN 2023",
+    location: "Stockholm",
+    description: "Ledde ett UF-företag som utvecklade en universell fjärrkontroll som använde infraröda signaler för att koppla till olika TV-apparater. Under min ledning vann vårt team priset för Årets UF-företag 2023 i Stockholm och placerade sig bland de tio bästa i Sverige med vår innovativa produkt.",
+  },
+  {
     company: "Försvarsmakten",
     companyUrl: "https://www.forsvarsmakten.se/",
     logo: "/lovable-uploads/f5d66119-b91a-414f-8d67-b318c75682ba.png",
@@ -44,14 +53,6 @@ export const experiences: Experience[] = [
     duration: "AUG 2024 - PÅGÅENDE",
     location: "Karlskrona",
     description: "Studerar på civilingenjörsprogrammet med inriktning mot AI och maskininlärning. Fokuserar på kurser inom programmering, matematik, maskininlärning och AI-system med särskilt intresse för tillämpningar inom försvarsindustrin och cybersäkerhet.",
-  },
-  {
-    company: "Studentprojekt - AI för Cybersäkerhet",
-    companyUrl: "#",
-    logo: "/lovable-uploads/aab37b0d-b667-40c0-88ec-aacd2f45c642.png",
-    position: "Projektledare",
-    duration: "SEP 2024 - DEC 2024",
-    description: "Ledde ett studentprojekt för utveckling av ett AI-system för identifiering av cyberhot i realtid. Arbetade med maskininlärningsalgoritmer för mönsterigenkänning i nätverkstrafik och implementerade ett varningssystem för potentiella säkerhetshot.",
   }
 ];
 
@@ -65,29 +66,29 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "ElektroSim",
-    description: "Simuleringsverktyg för elektriska kretsar med visualisering av strömflöden",
+    title: "AlgoTrader Pro",
+    description: "Handelsalgoritm som använder statistiska modeller för att identifiera arbitragemöjligheter på kryptovalutamarknaden",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
     url: "#",
     github: "#",
   },
   {
-    title: "AI-Övervakningssystem",
-    description: "Prototyp för AI-baserat övervakningssystem för perimeterskydd",
+    title: "QuantBacktester",
+    description: "Plattform för backtesting av tradingstrategier med historisk data från aktie- och valutamarknader",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png",
     url: "#",
     github: "#",
   },
   {
-    title: "CyberDetect",
-    description: "Verktyg för automatisk detektering av cyberhot med maskininlärning",
+    title: "RemoteLink UF",
+    description: "Universell fjärrkontroll baserad på infraröd teknik som kan styra alla typer av TV-apparater",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png",
     url: "#",
     github: "#",
   },
   {
-    title: "DrönareAI",
-    description: "Autonom styrning för drönare med bildbehandling",
+    title: "MarketML",
+    description: "Maskininlärningsmodell för prediktion av marknadsrörelser baserad på tekniska indikatorer",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
     url: "#",
     github: "#",
@@ -100,8 +101,8 @@ export const projects: Project[] = [
     github: "#",
   },
   {
-    title: "ElNätverksAnalys",
-    description: "Analys av elnätverk med prediktiva modeller för underhåll",
+    title: "CyberDefense",
+    description: "Analys av nätverkstrafik med AI för att upptäcka säkerhetshot i realtid",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/vue/vue.png",
     url: "#",
     github: "#",
@@ -120,8 +121,8 @@ export type BlogPost = {
 
 export const blogPosts: BlogPost[] = [
   {
-    title: "AI i Försvarets Tjänst: Framtidens Teknologier",
-    description: "En genomgång av hur artificiell intelligens förändrar det moderna försvaret och vilka utmaningar som kommer med implementeringen.",
+    title: "Algoritmisk Trading: Att bygga framgångsrika strategier med Python",
+    description: "En genomgång av hur man kan använda Python för att utveckla och backtesta algoritmiska tradingstrategier på finansmarknaden.",
     image: "https://images.unsplash.com/photo-1640552435388-a54879e72b88?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     date: "8 sep, 2024",
     readTime: "5 min",
@@ -129,8 +130,8 @@ export const blogPosts: BlogPost[] = [
     platform: "Medium",
   },
   {
-    title: "Elektricitetens Roll i Moderna Stridssystem",
-    description: "En teknisk analys av hur elektriska system utgör ryggraden i modern försvarsteknologi och hur dessa system underhålls.",
+    title: "Min resa som UF-entreprenör: Från idé till prisbelönt produkt",
+    description: "Reflektioner och lärdomar från min tid som VD för RemoteLink UF och hur vi utvecklade vår prisbelönta universella fjärrkontroll.",
     image: "https://images.unsplash.com/photo-1556075798-4825dfaaf498?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1476&q=80",
     date: "20 aug, 2024",
     readTime: "7 min",
@@ -138,7 +139,7 @@ export const blogPosts: BlogPost[] = [
     platform: "LinkedIn",
   },
   {
-    title: "Mina Erfarenheter från Värnplikten som Elektricitetsmekaniker",
+    title: "Mina erfarenheter från värnplikten som elektricitetsmekaniker",
     description: "Reflektioner kring min tid i försvarsmakten och hur den tekniska utbildningen har påverkat min akademiska inriktning.",
     image: "https://images.unsplash.com/photo-1611162616475-46b635cb6868?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
     date: "15 jul, 2024",
@@ -147,8 +148,8 @@ export const blogPosts: BlogPost[] = [
     platform: "BTH Studentblogg",
   },
   {
-    title: "Maskininlärning för Anomalidetektion i Elnät",
-    description: "Hur AI och maskininlärning kan användas för att upptäcka och förebygga avvikelser i elnätverk inom militära installationer.",
+    title: "Kvantitativa analysmetoder för finansmarknaden",
+    description: "En djupdykning i hur matematiska modeller och statistiska verktyg kan användas för att analysera och förutsäga marknadsrörelser.",
     image: "https://images.unsplash.com/photo-1535016120720-40c646be5580?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
     date: "3 jun, 2024",
     readTime: "8 min",
@@ -163,22 +164,22 @@ export const softSkills = [
     description: "Genom min utbildning som elektricitetsmekaniker i försvarsmakten har jag utvecklat förmågan att lösa komplexa tekniska problem under tidspress och ibland svåra förhållanden.",
   },
   {
-    title: "Teamarbete",
-    description: "Militärtjänsten lärde mig att samarbeta effektivt i team där tydlig kommunikation och ömsesidigt förtroende är avgörande för framgång.",
+    title: "Ledarskap",
+    description: "Som VD för ett framgångsrikt UF-företag har jag lett ett team från konceptutveckling till produkt och marknadsframgång, vilket gav mig värdefulla ledaregenskaper och erfarenhet av att driva projekt.",
   },
   {
-    title: "Disciplin och strukturerat arbete",
-    description: "Min bakgrund från försvarsmakten har gett mig en stark arbetsdisciplin och förmåga att arbeta strukturerat med tekniska system och dokumentation, något som även kommer till nytta i mina studier.",
+    title: "Analytiskt tänkande",
+    description: "Mitt intresse för algoritmisk trading har utvecklat min förmåga att analysera data, identifiera mönster och fatta beslut baserade på kvantitativa modeller och statistiska analyser.",
   },
 ];
 
 export const technologies = [
-  { name: "Python", description: "Programmeringsspråk", icon: "python" },
+  { name: "Python", description: "Programmering och dataanalys", icon: "python" },
   { name: "TensorFlow", description: "Maskininlärningsbibliotek", icon: "tensorflow" },
   { name: "PyTorch", description: "Djupinlärning", icon: "pytorch" },
   { name: "Java", description: "Programmeringsspråk", icon: "java" },
   { name: "C++", description: "Programmeringsspråk", icon: "cpp" },
-  { name: "MATLAB", description: "Beräkningsverktyg", icon: "matlab" },
+  { name: "MATLAB", description: "Kvantitativ analys", icon: "matlab" },
   { name: "SQL", description: "Databaser", icon: "sql" },
   { name: "Git", description: "Versionskontroll", icon: "git" },
   { name: "Linux", description: "Operativsystem", icon: "linux" },
@@ -188,5 +189,6 @@ export const technologies = [
 export const tools = [
   { name: "Visual Studio Code", description: "Kodeditor", icon: "vscode" },
   { name: "PyCharm", description: "Python IDE", icon: "pycharm" },
-  { name: "Jupyter Notebook", description: "Interaktiv programmering", icon: "jupyter" },
+  { name: "Jupyter Notebook", description: "Interaktiv analys", icon: "jupyter" },
+  { name: "Bloomberg Terminal", description: "Finansdata", icon: "bloomberg" },
 ];

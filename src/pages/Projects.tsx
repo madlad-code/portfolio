@@ -6,10 +6,10 @@ export default function Projects() {
   return (
     <div className="min-h-screen pt-24">
       <div className="wrapper">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-in">Projects</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-in">Projekt</h1>
         
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl animate-fade-in animate-delay-100">
-          I've worked on tons of little projects over the years but these are the ones that I'm most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas on how it can be improved.
+          Jag har arbetat med många mindre projekt genom åren, men dessa är de jag är mest stolt över. Flera av dem kombinerar min kunskap inom teknik, programmering och finans - särskilt inom algoritmisk trading och kvantitativa analysmetoder. Många av projekten är öppen källkod, så om du ser något som väcker ditt intresse, kolla gärna koden och bidra om du har idéer för förbättringar.
         </p>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">

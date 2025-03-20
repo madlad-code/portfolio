@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <div className="min-h-screen pt-24">
       <div className="wrapper">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-12 animate-fade-in">Work Experience</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-12 animate-fade-in">Erfarenhet</h1>
         
         <div className="mb-24">
           {experiences.map((experience, index) => (

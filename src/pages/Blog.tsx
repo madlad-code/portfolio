@@ -7,14 +7,14 @@ export default function Blog() {
   return (
     <div className="min-h-screen pt-24">
       <div className="wrapper">
-        <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-in">Blog</h1>
+        <h1 className="text-4xl sm:text-5xl font-bold mb-6 animate-fade-in">Blogg</h1>
         
         <p className="text-lg text-muted-foreground mb-12 max-w-3xl animate-fade-in animate-delay-100">
-          Welcome to my blog domain where I share personal stories about things I've learned, projects I'm building in and just general musings. I also write for other publications.
+          Välkommen till min blogg där jag delar personliga berättelser om saker jag lärt mig, projekt jag bygger och allmänna funderingar. Jag skriver också för andra publikationer inom teknik, finans och programmering.
         </p>
         
         <div className="mb-8 flex flex-wrap gap-3 animate-fade-in animate-delay-200">
-          {["FreeCodeCamp", "Hashnode", "Sanity"].map((platform) => (
+          {["Medium", "LinkedIn", "BTH Blogg"].map((platform) => (
             <div 
               key={platform}
               className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-full bg-secondary/60 text-white"
@@ -26,7 +26,7 @@ export default function Blog() {
           
           <button className="ml-auto inline-flex items-center gap-1.5 px-3 py-1.5 text-xs rounded-full bg-secondary hover:bg-secondary/80 transition-colors">
             <Filter size={14} />
-            <span>Explore All</span>
+            <span>Utforska alla</span>
           </button>
         </div>
         
