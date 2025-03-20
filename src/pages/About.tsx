@@ -34,41 +34,48 @@ export default function About() {
               <div className="absolute inset-0 bg-grid opacity-5 animate-pulse-slow"></div>
               <div className="absolute top-20 -right-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+              <div className="relative z-10 h-full flex items-center justify-center">
+                <img 
+                  src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" 
+                  alt="Militär elektronik" 
+                  className="w-full h-auto max-h-72 object-cover rounded-lg shadow-lg"
+                />
+              </div>
             </div>
           </div>
         </section>
         
         {/* Current Work */}
         <section className="mb-24">
-          <h2 className="text-2xl font-semibold mb-8">What I'm Currently Hacking On?</h2>
+          <h2 className="text-2xl font-semibold mb-8">Vad jag studerar just nu</h2>
           
           <div className="border border-border rounded-lg p-6 bg-card/20 backdrop-blur-sm relative overflow-hidden">
             <div className="absolute inset-0 bg-grid opacity-5"></div>
             
             <p className="relative z-10 text-muted-foreground mb-4">
-              I'm still trying to wrap-up a few freelance projects but I took out time this week to work on the ggdagbo hackathon. It was a tireless 2-day marathon of coding and collaborating. In the end, we emerged the official winners.
+              Jag studerar för närvarande civilingenjörsprogrammet inom AI och maskininlärning vid Blekinge Tekniska Högskola. Detta är starten på min resa inom avancerad teknik efter att ha slutfört min värnplikt som elektricitetsmekaniker hos Försvarsmakten.
             </p>
             
             <div className="relative z-10 mt-6 rounded-lg overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1531498860502-7c67cf02f657?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                alt="Hackathon team" 
+                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                alt="Studier inom AI" 
                 className="w-full object-cover rounded-lg"
               />
               <p className="mt-2 text-xs text-muted-foreground">
-                A shot of my teammate and I with host organizers (May 02 2024)
+                Visualisering av neurala nätverk - en del av min utbildning inom AI (augusti 2024)
               </p>
             </div>
             
             <p className="relative z-10 mt-6 text-muted-foreground">
-              We built a web-app powered by Google's Gemini AI that takes your notes as text input or PDF upload and converts it into interactive quizzes you can practice with. The app is called quiznote and it is currently open to contributions.
+              Utbildningen kombinerar matematisk teori med praktisk programmering och jag har särskilt intresse för tillämpningar inom försvarsteknologi och cybersäkerhet. Mina tidigare erfarenheter från Försvarsmakten ger mig en unik förståelse för de tekniska behov som finns inom denna sektor.
             </p>
           </div>
         </section>
         
         {/* Soft Skills */}
         <section className="mb-24">
-          <h2 className="text-2xl font-semibold mb-8">Soft Skills</h2>
+          <h2 className="text-2xl font-semibold mb-8">Kompetenser</h2>
           
           <div className="space-y-8">
             {softSkills.map((skill, index) => (
@@ -88,62 +95,55 @@ export default function About() {
           </div>
         </section>
         
-        {/* Setup */}
+        {/* Military experience */}
         <section className="mb-24">
-          <h2 className="text-2xl font-semibold mb-8">Setup</h2>
+          <h2 className="text-2xl font-semibold mb-8">Militär erfarenhet</h2>
           
           <div className="border border-border rounded-lg p-6 bg-card/20 backdrop-blur-sm relative overflow-hidden">
             <div className="absolute inset-0 bg-grid opacity-5"></div>
             
             <p className="relative z-10 text-muted-foreground mb-6">
-              I made a <a href="#" className="text-blue-400 hover:underline">notion list</a> of things I need to build the right setup for my productivity. Among this list, I've purchased a personal laptop. Hopefully before the end of 2023, I should buy everything else.
+              Min värnplikt som elektricitetsmekaniker gav mig både teknisk kompetens och värdefulla ledarskapsförmågor. Jag arbetade med installation, underhåll och felsökning av elektriska system för militära enheter.
             </p>
             
             <div className="relative z-10 rounded-lg overflow-hidden mb-4">
               <img 
-                src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
-                alt="Setup" 
+                src="https://images.unsplash.com/photo-1542876882-ebd8cc90d9f3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" 
+                alt="Militär utrustning" 
                 className="w-full object-cover rounded-lg"
               />
               <p className="mt-2 text-xs text-muted-foreground text-center">
-                Setup I plan to build someday
+                Bild som representerar den teknik jag arbetade med under militärtjänsten
               </p>
             </div>
             
-            <p className="relative z-10 text-center">
-              <a 
-                href="#" 
-                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-white transition-colors"
-              >
-                <span>Feeling generous? You can</span>
-                <span className="text-blue-400 hover:underline">buy me a coffee</span>
-                <span>to support my work.</span>
-              </a>
+            <p className="relative z-10 text-muted-foreground">
+              Denna erfarenhet har gett mig en djup förståelse för hur avancerad teknik används i försvarssammanhang, vilket jag nu bygger vidare på genom mina studier inom AI och maskininlärning.
             </p>
           </div>
         </section>
         
         {/* Technologies & Tools */}
         <section className="mb-24">
-          <h2 className="text-2xl font-semibold mb-8">Usage</h2>
+          <h2 className="text-2xl font-semibold mb-8">Teknologier</h2>
           <p className="text-muted-foreground mb-6">
-            Tools, technologies and gadgets I use on a daily basis but not limited to.
+            Verktyg och teknologier jag använder regelbundet i mina studier och projekt.
           </p>
           
           <div className="mb-10">
-            <h3 className="text-xl font-medium mb-6">Technologies</h3>
+            <h3 className="text-xl font-medium mb-6">Programmeringsspråk & verktyg</h3>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { name: "React", desc: "UI Library", color: "blue" },
-                { name: "Next.js", desc: "React Framework", color: "gray" },
-                { name: "Redux", desc: "Production-grade State Management", color: "purple" },
-                { name: "Zustand", desc: "State Management (personal projects)", color: "yellow" },
-                { name: "Sanity", desc: "Headless CMS", color: "red" },
-                { name: "Tailwind CSS", desc: "Styling Library", color: "sky" },
-                { name: "TypeScript", desc: "Typed Superset of JavaScript Library", color: "blue" },
-                { name: "Sass", desc: "CSS Preprocessor", color: "pink" },
-                { name: "VitePress", desc: "Static Site Generator", color: "green" }
+                { name: "Python", desc: "Maskininlärning & dataanalys", color: "blue" },
+                { name: "TensorFlow", desc: "Djupinlärning", color: "yellow" },
+                { name: "PyTorch", desc: "Neurala nätverk", color: "red" },
+                { name: "MATLAB", desc: "Matematisk modellering", color: "blue" },
+                { name: "C++", desc: "Systemutveckling", color: "purple" },
+                { name: "Git", desc: "Versionskontroll", color: "orange" },
+                { name: "Linux", desc: "Operativsystem", color: "green" },
+                { name: "Arduino", desc: "Elektronikprojekt", color: "teal" },
+                { name: "SQL", desc: "Databaser", color: "blue" }
               ].map((tech, index) => (
                 <div 
                   key={tech.name}
@@ -162,13 +162,13 @@ export default function About() {
           </div>
           
           <div>
-            <h3 className="text-xl font-medium mb-6">Tools</h3>
+            <h3 className="text-xl font-medium mb-6">Elektrisk utrustning</h3>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
               {[
-                { name: "Visual Studio Code", desc: "Text Editor", color: "blue" },
-                { name: "PyCharm", desc: "Python IDE", color: "yellow" },
-                { name: "IntelliJ Idea", desc: "Java IDE", color: "pink" }
+                { name: "Oscilloskop", desc: "Signalanalys", color: "green" },
+                { name: "Multimeter", desc: "Elektriska mätningar", color: "yellow" },
+                { name: "Lödstation", desc: "Elektronikreparationer", color: "red" }
               ].map((tool, index) => (
                 <div 
                   key={tool.name}
@@ -191,7 +191,7 @@ export default function About() {
         <section className="mb-24">
           <div className="border border-border rounded-lg p-6 bg-secondary/5 backdrop-blur-sm">
             <p className="mb-4 text-muted-foreground">
-              If you ever spot me in the wild, don't hesitate to say hello! Let's grab a drink and geek out over the latest advancements in front-end development or discuss our favorite programming language.
+              Jag är intresserad av möjligheter inom försvarsindustrin och teknologiföretag som arbetar med avancerade system. Tveka inte att kontakta mig för frågor eller samarbeten.
             </p>
             
             <a 
