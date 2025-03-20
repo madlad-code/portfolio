@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils";
 interface BlogPostProps {
   post: BlogPostType;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export default function BlogPost({ post, className }: BlogPostProps) {
+export default function BlogPost({ post, className, style }: BlogPostProps) {
   return (
     <a 
       href={post.url} 
@@ -19,6 +20,7 @@ export default function BlogPost({ post, className }: BlogPostProps) {
         "hover:border-muted hover:shadow-lg hover:shadow-primary/5",
         className
       )}
+      style={style}
     >
       <div className="relative aspect-[16/9] overflow-hidden bg-secondary/20">
         <img 

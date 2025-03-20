@@ -2,7 +2,7 @@
 import { socialLinks } from "@/lib/data";
 import { 
   Github, Twitter, Linkedin, Codepen, Dribbble, Instagram, 
-  GameController, Camera, Youtube, Newspaper, BarChart, LifeBuoy, Box, GitBranch 
+  Camera, Youtube, Newspaper, BarChart, LifeBuoy, Box, GitBranch 
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
@@ -13,7 +13,6 @@ const iconMap: Record<string, React.ReactNode> = {
   Codepen: <Codepen size={16} />,
   Dribbble: <Dribbble size={16} />,
   Instagram: <Instagram size={16} />,
-  GameController: <GameController size={16} />,
   Camera: <Camera size={16} />,
   Youtube: <Youtube size={16} />,
   Newspaper: <Newspaper size={16} />,

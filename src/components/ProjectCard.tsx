@@ -6,9 +6,10 @@ import { cn } from "@/lib/utils";
 interface ProjectCardProps {
   project: Project;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export default function ProjectCard({ project, className }: ProjectCardProps) {
+export default function ProjectCard({ project, className, style }: ProjectCardProps) {
   return (
     <div 
       className={cn(
@@ -16,6 +17,7 @@ export default function ProjectCard({ project, className }: ProjectCardProps) {
         "hover:border-muted hover:shadow-lg hover:shadow-secondary/5",
         className
       )}
+      style={style}
     >
       <div className="flex items-start gap-4">
         <div className="flex-shrink-0 w-12 h-12 rounded-md overflow-hidden bg-secondary/20 p-2 backdrop-blur-sm">
