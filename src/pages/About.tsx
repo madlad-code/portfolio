@@ -1,9 +1,10 @@
-
 import { personalInfo, softSkills } from "@/lib/data";
 import SocialLinks from "@/components/SocialLinks";
 import ContributionGraph from "@/components/ContributionGraph";
 import { ArrowDown, ArrowRight, Mail } from "lucide-react";
 import { useState } from "react";
+import { ChatBot } from "@/components/ChatBot";
+import { Card } from "@/components/ui/card";
 
 export default function About() {
   const [showMore, setShowMore] = useState(false);
@@ -25,8 +26,9 @@ export default function About() {
               
               <SocialLinks className="mb-8 animate-fade-in animate-delay-200" />
               
-              <div className="animate-fade-in animate-delay-300">
+              <div className="space-y-2">
                 <ContributionGraph />
+                <ChatBot />
               </div>
             </div>
             
@@ -38,13 +40,13 @@ export default function About() {
                 <img 
                   src="https://images.unsplash.com/photo-1579403124614-197f69d8187b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" 
                   alt="Militär elektronik" 
-                  className="w-full h-auto max-h-72 object-cover rounded-lg shadow-lg"
+                  className="w-full h-auto rounded-lg shadow-2xl"
                 />
               </div>
             </div>
           </div>
         </section>
-        
+
         {/* Current Work */}
         <section className="mb-24">
           <h2 className="text-2xl font-semibold mb-8">Vad jag studerar just nu</h2>
