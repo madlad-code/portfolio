@@ -8,7 +8,7 @@ export const personalInfo = {
 };
 
 export const socialLinks = [
-  { name: "GitHub", url: "https://https://github.com/madlad-code.com", icon: "Github" },
+  { name: "GitHub", url: "https://github.com/madlad-code", icon: "Github" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/oscar-enghag-2b4902238/", icon: "Linkedin" },
   { name: "X", url: "https://x.com", icon: "Twitter" },
   { name: "YouTube", url: "https://youtube.com", icon: "Youtube" },
@@ -28,7 +28,7 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
-    company: "UF-företag - RemoteLink",
+    company: "UF-företag - Full Koll UF",
     companyUrl: "#",
     logo: "/lovable-uploads/aab37b0d-b667-40c0-88ec-aacd2f45c642.png",
     position: "VD",
@@ -66,19 +66,38 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "AlgoTrader Pro",
+    title: "Simsim",
+    description: "Jag genomförde en analytics-fördjupning där jag simulerade 1000 körningar för att analysera hur resurser som produkter, workers och food förändrades över tid, samt en adaptive networks-fördjupning som identifierade systemets dominans och justerade transitioner för att hålla simuleringen balanserad. Dessa fördjupningar bidrog till att stärka min kompetens inom statistisk analys, neurala nätverk och programmeringsförmågor, vilket kompletterar min utbildning till civilingenjör inom AI och maskininlärning.",
+    logo: "/images/Figure_1.png",
+    url: "#",
+    github: "https://github.com/madlad-code/simsim-GitHub",
+  },
+
+  {
+    title: "Option pricing",
+    description: "Projektet syftar till att utveckla en modell för prissättning av aktiemarknadens optioner genom att implementera metoder som Black-Scholes och Monte Carlo-simuleringar i Python, där historisk data, volatilitet och riskfri ränta analyseras för att beräkna teoretiska priser och jämföra dem med faktiska marknadspriser.",
+    logo: "/images/Figure_2.png",
+    url: "#",
+    github: "https://github.com/madlad-code/option_pricing",
+  },
+
+  /*
+  { Alldeles för naivt
+    title: "AlgoTrader",
     description: "Handelsalgoritm som använder statistiska modeller för att identifiera arbitragemöjligheter på kryptovalutamarknaden",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/python/python.png",
     url: "#",
     github: "#",
   },
-  {
+
+  { Detta finns i princip redan via quant guild grabben
     title: "QuantBacktester",
-    description: "Plattform för backtesting av tradingstrategier med historisk data från aktie- och valutamarknader",
+    description: "Plattform för backtesting av tradingstrategier med historisk data från aktie - och valutamarknader",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/tensorflow/tensorflow.png",
     url: "#",
     github: "#",
-  },
+  }
+  */
   {
     title: "Full Koll UF",
     description: "Universell fjärrkontroll som med hjälp av infraröda signaler kan koppla till alla olika typer av TV-apparater. Vi designade och 3d-printade all hårdvara själva, designade och frästa alla kretskort själva med en CNC-maskin samt programmerade all mjukvara på egen hand. Detta gav oss otroligt bra marginaler samt en förmåga att göra förändringar på kontollen efter kundens behov",
@@ -88,7 +107,7 @@ export const projects: Project[] = [
   },
   {
     title: "MarketML",
-    description: "Primitiv maskininlärningsmodell för spårning av marknadsrörelser baserad på tekniska indikatorer och statistik.",
+    description: "Primitiv maskininlärningsmodell för prediktion av marknadsrörelser baserad på tekniska indikatorer och statistik.",
     logo: "https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png",
     url: "#",
     github: "https://github.com/madlad-code/marketML",
