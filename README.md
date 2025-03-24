@@ -1,10 +1,6 @@
 
 # Oscar Enghag | AI & Maskininlärning Portfolio
 
-## Project info
-
-**URL**: https://lovable.dev/projects/130815ca-e0fc-4e59-924a-ef9fcd0145cc
-
 ## Hur du kör projektet lokalt
 
 För att köra projektet på din lokala maskin, följ dessa steg:
