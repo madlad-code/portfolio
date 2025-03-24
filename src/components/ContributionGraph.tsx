@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
@@ -8,48 +7,150 @@ type ContributionDay = {
   level: 0 | 1 | 2 | 3 | 4;
 };
 
+type GitHubContributionResponse = {
+  data: {
+    user: {
+      contributionsCollection: {
+        contributionCalendar: {
+          totalContributions: number;
+          weeks: {
+            contributionDays: {
+              contributionCount: number;
+              date: string;
+              color: string;
+            }[];
+          }[];
+        };
+      };
+    };
+  };
+};
+
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-const years = [2021, 2022, 2023, 2024];
+const currentYear = new Date().getFullYear();
+const years = [currentYear - 3, currentYear - 2, currentYear - 1, currentYear];
+
+// Function to determine contribution level based on count
+const getContributionLevel = (count: number): 0 | 1 | 2 | 3 | 4 => {
+  if (count === 0) return 0;
+  if (count === 1) return 1;
+  if (count <= 3) return 2;
+  if (count <= 6) return 3;
+  return 4;
+};
 
 export default function ContributionGraph() {
-  const [activeYear, setActiveYear] = useState<number>(2024);
+  const [activeYear, setActiveYear] = useState<number>(currentYear);
   const [contributions, setContributions] = useState<ContributionDay[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [totalContributions, setTotalContributions] = useState(0);
 
   useEffect(() => {
-    // Simulate loading contributions data
-    setIsLoading(true);
-    
-    setTimeout(() => {
-      // Generate random contribution data
-      const days = 371; // Just over a year of days
+    const fetchGitHubContributions = async () => {
+      setIsLoading(true);
+      
+      try {
+        const username = import.meta.env.VITE_GITHUB_USERNAME;
+        const token = import.meta.env.VITE_GITHUB_TOKEN;
+        
+        if (!username || !token) {
+          throw new Error("GitHub username or token not found in environment variables");
+        }
+
+        // Calculate date range for the selected year
+        const fromDate = `${activeYear}-01-01T00:00:00Z`;
+        const toDate = `${activeYear}-12-31T23:59:59Z`;
+        
+        const query = `
+          query {
+            user(login: "${username}") {
+              contributionsCollection(from: "${fromDate}", to: "${toDate}") {
+                contributionCalendar {
+                  totalContributions
+                  weeks {
+                    contributionDays {
+                      contributionCount
+                      date
+                    }
+                  }
+                }
+              }
+            }
+          }
+        `;
+
+        const response = await fetch("https://api.github.com/graphql", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "Authorization": `Bearer ${token}`
+          },
+          body: JSON.stringify({ query })
+        });
+
+        if (!response.ok) {
+          throw new Error(`GitHub API error: ${response.status}`);
+        }
+
+        const result: GitHubContributionResponse = await response.json();
+        
+        if (!result.data?.user?.contributionsCollection?.contributionCalendar) {
+          throw new Error("Invalid response format from GitHub API");
+        }
+
+        const calendarData = result.data.user.contributionsCollection.contributionCalendar;
+        setTotalContributions(calendarData.totalContributions);
+        
+        // Transform GitHub data to our format
+        const transformedData: ContributionDay[] = [];
+        
+        calendarData.weeks.forEach(week => {
+          week.contributionDays.forEach(day => {
+            transformedData.push({
+              count: day.contributionCount,
+              date: day.date,
+              level: getContributionLevel(day.contributionCount)
+            });
+          });
+        });
+        
+        setContributions(transformedData);
+      } catch (error) {
+        console.error("Error fetching GitHub contributions:", error);
+        // Fallback to dummy data if API fails
+        generateDummyData();
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    const generateDummyData = () => {
+      // Generate dummy contribution data as fallback
+      const days = 371;
       const newContributions: ContributionDay[] = [];
+      let total = 0;
       
       for (let i = 0; i < days; i++) {
         const date = new Date();
+        date.setFullYear(activeYear);
         date.setDate(date.getDate() - (days - i));
         
-        const count = Math.floor(Math.random() * 5); // 0-4 contributions
-        let level: 0 | 1 | 2 | 3 | 4 = 0;
-        
-        if (count === 1) level = 1;
-        else if (count === 2) level = 2;
-        else if (count === 3) level = 3;
-        else if (count >= 4) level = 4;
+        const count = Math.floor(Math.random() * 5);
+        total += count;
         
         newContributions.push({
           count,
           date: date.toISOString().split('T')[0],
-          level,
+          level: getContributionLevel(count),
         });
       }
       
       setContributions(newContributions);
-      setIsLoading(false);
-    }, 500);
-  }, [activeYear]);
+      setTotalContributions(total);
+    };
 
-  const totalContributions = contributions.reduce((acc, day) => acc + day.count, 0);
+    fetchGitHubContributions();
+  }, [activeYear]);
 
   // Group contributions by week and day
   const weeks: ContributionDay[][] = [];
@@ -77,7 +178,7 @@ export default function ContributionGraph() {
   return (
     <div className="w-full overflow-hidden">
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-xl font-semibold tracking-tight">Contribution Graph</h2>
+        <h2 className="text-xl font-semibold tracking-tight">GitHub Contribution Graph</h2>
         <div className="flex space-x-1">
           {years.map(year => (
             <button
@@ -147,7 +248,7 @@ export default function ContributionGraph() {
           {/* Legend */}
           <div className="mt-2 flex items-center justify-between">
             <div className="text-xs text-muted-foreground">
-              {totalContributions} contributions in the last year
+              {totalContributions} contributions in {activeYear}
             </div>
             
             <div className="flex items-center space-x-2">
