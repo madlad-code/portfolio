@@ -19,10 +19,10 @@ För att köra projektet på din lokala maskin, följ dessa steg:
 
 ```sh
 # Steg 1: Klona repositoryt
-git clone <projektets-git-url>
+git clone https://github.com/madlad-code/portfolio.git
 
 # Steg 2: Navigera till projektmappen
-cd <projektmappens-namn>
+cd portfolio
 
 # Steg 3: Installera beroenden
 npm install
@@ -51,16 +51,6 @@ Projektet är byggt med:
 - React
 - shadcn-ui
 - Tailwind CSS
-
-## Hur du kan deploya projektet
-
-Du kan enkelt deploya projektet genom att öppna [Lovable](https://lovable.dev/projects/130815ca-e0fc-4e59-924a-ef9fcd0145cc) och klicka på Share -> Publish.
-
-## Anpassad domän
-
-Vi stödjer inte anpassade domäner ännu. Om du vill deploya ditt projekt under din egen domän rekommenderar vi Netlify. Besök vår dokumentation för mer information: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
-
-## Utvecklingsnotiser
 
 ### Filstruktur
 - `src/pages/`: Innehåller alla huvudsidor
