@@ -90,7 +90,7 @@ export function ChatBot() {
           'X-Title': 'Personal Portfolio Chatbot'
         },
         body: JSON.stringify({
-          model: 'deepseek/deepseek-r1-zero:free',
+          model: 'google/gemini-2.5-pro-exp-03-25:free',
           messages: [
             { 
               role: 'system', 
